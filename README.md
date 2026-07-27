@@ -1,84 +1,33 @@
-# Sudoku App
+# Sudoku Java Game
 
-A Sudoku game built in Java. Play classic 9×9 puzzles with a clean, keyboard-friendly interface.
+A classic 9×9 Sudoku game built in Java.
 
-## Features
+> **Status:** Early development — game logic and UI are being added incrementally.
 
-- **Classic Sudoku** — Standard 9×9 grid with 3×3 boxes
-- **Multiple difficulties** — Easy, medium, and hard puzzles
-- **Input validation** — Highlights conflicts in rows, columns, and boxes
-- **Hints and undo** — Get help when stuck and step back through moves
-- **Timer and stats** — Track solve time and personal bests
+## What we're building
 
-> **Note:** This project is in early development. Game logic and the user interface are being built out incrementally.
+- Standard 9×9 grid with row, column, and 3×3 box rules
+- Puzzle generation and input validation
+- LibGDX-based interface
 
 ## Requirements
 
-- Java 17 or later
-- Maven 3.8+ (for building and running tests)
+- Java 17+
+- Gradle
 
-## Getting Started
-
-Clone the repository:
+## Getting started
 
 ```bash
 git clone https://github.com/stoichy/Sudoku-App.git
 cd Sudoku-App
 ```
 
-Build the project (once source is added):
+Once source is added, run tests with:
 
 ```bash
-mvn clean package
+gradle test
 ```
-
-Run the game:
-
-```bash
-mvn exec:java
-```
-
-Or run the packaged JAR:
-
-```bash
-java -jar target/sudoku-app.jar
-```
-
-## Project Structure
-
-```
-Sudoku-App/
-├── src/
-│   ├── main/java/     # Game logic, puzzle generation, and UI
-│   └── test/java/     # Unit and integration tests
-├── pom.xml            # Maven build configuration
-└── README.md
-```
-
-## Development
-
-Run tests:
-
-```bash
-mvn test
-```
-
-Format and lint (when configured):
-
-```bash
-mvn verify
-```
-
-## Contributing
-
-Contributions are welcome. Please open an issue to discuss larger changes, or submit a pull request with a clear description of your changes.
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/my-feature`)
-3. Commit your changes (`git commit -m 'Add my feature'`)
-4. Push to your branch (`git push origin feature/my-feature`)
-5. Open a pull request
 
 ## License
 
-This project is licensed under the Apache License 2.0. See [LICENSE](LICENSE) for details.
+Apache 2.0 — see [LICENSE](LICENSE).
