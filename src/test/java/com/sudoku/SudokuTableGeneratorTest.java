@@ -36,6 +36,22 @@ class SudokuTableGeneratorTest {
         assertThrows(IllegalArgumentException.class, () -> generator.generatePuzzle(82));
     }
 
+    @Test
+    void generatesPuzzleForEachDifficultyLevel() {
+        for (DifficultyLevel difficulty : DifficultyLevel.values()) {
+            int[][] puzzleBoard = generator.generatePuzzle(difficulty);
+
+            assertTrue(SudokuValidator.isBoardValid(puzzleBoard));
+            assertTrue(countEmptyCells(puzzleBoard) > 0);
+            assertTrue(countEmptyCells(puzzleBoard) <= difficulty.getMaxCellsToRemove());
+        }
+    }
+
+    @Test
+    void rejectsNullDifficultyLevel() {
+        assertThrows(IllegalArgumentException.class, () -> generator.generatePuzzle((DifficultyLevel) null));
+    }
+
     private int countEmptyCells(int[][] board) {
         int emptyCount = 0;
         for (int row = 0; row < SudokuValidator.BOARD_SIZE; row++) {

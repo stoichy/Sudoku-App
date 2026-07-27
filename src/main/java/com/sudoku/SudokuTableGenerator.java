@@ -44,6 +44,17 @@ public final class SudokuTableGenerator {
     }
 
     /**
+     * Returns a puzzle carved for the given difficulty level.
+     */
+    public int[][] generatePuzzle(DifficultyLevel difficulty) {
+        if (difficulty == null) {
+            throw new IllegalArgumentException("Difficulty level must not be null.");
+        }
+
+        return generatePuzzle(difficulty.pickCellsToRemove(random));
+    }
+
+    /**
      * Returns a puzzle carved from a solved board by clearing up to
      * {@code cellsToRemove} cells while keeping the board valid.
      */
