@@ -1,0 +1,13 @@
+{
+  "extraKnownMarketplaces": {
+    "robrain": {
+      "source": {
+        "source": "github",
+        "repo": "adelinamart/robrain"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "robrain@robrain": true
+  }
+}
